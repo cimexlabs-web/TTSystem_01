@@ -1,24 +1,217 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <title>NSBM Table Tennis Club</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="mainCss.css" type="text/css">
-    </head>
-    
-    <body>
-        <nav class="navbar">
-            <div class="pic"><img class="logo" src="images/logo.jpg" alt="website logo"></div>
-            <div class="brand">NSBM TABLE TENNIS CLUB</div>
-            <ul class="navlist">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSBM Table Tennis Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mainCss.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img class="logo" src="images/logo.jpg" alt="NSBM Table Tennis Club logo">
+                <div class="brand">NSBM TABLE TENNIS CLUB</div>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="navlist" id="navList">
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#join" class="cta-button">Join Now</a></li>
             </ul>
-            
-        </nav>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome To<br>NSBM Table Tennis Club</h1>
+            <p>Join our vibrant community of table tennis enthusiasts and experience the thrill of the game!</p>
+            <a href="form.html" class="cta-button large">Join Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/cover.jpg" alt="Table tennis players">
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>We are the NSBM Table Tennis Club – a community of passionate players who
+      strive to improve skills, promote sportsmanship, and represent NSBM in
+      tournaments with pride. Whether you're a beginner or an advanced player,
+      our club welcomes you.</p>
+                </div>
+                <div class="about-images">
+                <div class="about-image">
+                    <img src="images/about1.jpg" alt="Table tennis match at NSBM">
+                </div>
+                <div class="about-image">
+                    <img src="images/about2.jpg" alt="Table tennis match at NSBM">
+                </div>
+                    
+                    </div>
+                <div class="about-images">
+                <div class="about-image">
+                    <img src="images/about3.jpg" alt="Table tennis match at NSBM">
+                </div>
+                <div class="about-image">
+                    <img src="images/about4.jpg" alt="Table tennis match at NSBM">
+                </div>
+                    
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Vision</h2>
+            <div class="vision-content">
+                
+                <div class="vision-text">
+                    <p>To be recognized as one of the leading university sports clubs,
+      nurturing talented players while fostering teamwork, discipline, and
+      a love for the game of table tennis.</p>
+                    
+                </div>
+                <div class="vision-image">
+                    <img src="images/vision.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="achievements" class="section">
+    <div class="container">
+        <h2 class="section-title">Our Achievements</h2>
+        <p class="section-subtitle">Celebrating our successes and milestones</p>
         
-    </body>
+        <div class="accordion">
+            
+            
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>2024</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="achievement-details">
+                        <img src="https://images.unsplash.com/photo-1516042439064-44c36de8e5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Regional Tournament">
+                        <div class="achievement-text">
+                            <h3> NSBM SPORTS FIESTA 2024</h3>
+                            
+                            <ul>
+                                <li>
+                                    Champions    –  Ruby Adventures (Boys) / Citrine Warriors (Girls)
+                                    
+                                    </li>
+                                <li>Runners up    –   Citrine Warriors (Boys) / Ruby Adventures (Girls)</li>
+                                <li>2nd Runner up –  Emerald Fighters (Boys) / Emerald Fighters (Girls)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>2023</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="achievement-details">
+                        <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Championship Trophy">
+                        <div class="achievement-text">
+                            <h3>  USPORTS 2023</h3>
+                            <ul>
+                                <li>   Champions – Mixed A Team</li>
+                                <li>   Champions – Women’s Team</li>
+                                
+                            </ul>
+                             <h3>NSBM SPORTS FIESTA 2023</h3>
+                            <ul>
+                                <li> Champions    – Emerald Fighters (Boys) / Sapphire Heroes (Girls)</li>
+                                <li>   1st Runners up    – Sapphire Heroes (Boys) / Ruby Adventures (Girls)</li>
+                                <li> 2nd Runner up – Citrine Warriors (Boys) / Emerald Fighters (Girls) </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+
+    <section id="join" class="section cta-section">
+        <div class="container">
+            <h2>Ready to Join?</h2>
+            <p>Become a part of our growing table tennis community</p>
+            <a href="form.html" class="cta-button large">Join Now</a>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>NSBM Green University, Mahenwaththa, Pitipana, Homagama</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ttclub@nsbm.lk</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+94 11 544 5000</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Training Sessions: Mon, Wed, Fri 4 PM - 7 PM</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form action="message" method="post" name="msg">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="mail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="msg" placeholder="Type your message here" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 NSBM Table Tennis Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

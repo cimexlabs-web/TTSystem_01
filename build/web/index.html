@@ -1,24 +1,140 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <title>NSBM Table Tennis Club</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="mainCss.css" type="text/css">
-    </head>
-    
-    <body>
-        <nav class="navbar">
-            <div class="pic"><img class="logo" src="images/logo.jpg" alt="website logo"></div>
-            <div class="brand">NSBM TABLE TENNIS CLUB</div>
-            <ul class="navlist">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSBM Table Tennis Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mainCss.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img class="logo" src="https://via.placeholder.com/60x53/004D26/FFFFFF?text=TT" alt="NSBM Table Tennis Club logo">
+                <div class="brand">NSBM TABLE TENNIS CLUB</div>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="navlist" id="navList">
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#join" class="cta-button">Join Now</a></li>
             </ul>
-            
-        </nav>
-        
-    </body>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome To<br>NSBM Table Tennis Club</h1>
+            <p>Join our vibrant community of table tennis enthusiasts and experience the thrill of the game!</p>
+            <a href="#join" class="cta-button large">Join Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" alt="Table tennis players">
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>The NSBM Table Tennis Club is a vibrant community of table tennis enthusiasts at NSBM Green University. We welcome players of all skill levels, from beginners to advanced competitors.</p>
+                    <p>Founded in 2018, our club has grown to over 200 active members who participate in regular training sessions, friendly matches, and competitive tournaments.</p>
+                    <p>We believe in fostering sportsmanship, friendship, and a love for the game of table tennis. Our certified coaches provide training to help members improve their skills and reach their full potential.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1593529467220-9d721ceb9a78?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Table tennis match at NSBM">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Vision</h2>
+            <div class="vision-content">
+                <div class="vision-image">
+                    <img src="https://images.unsplash.com/photo-1582573618380-94dfbaffa397?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Table tennis training session">
+                </div>
+                <div class="vision-text">
+                    <p>Our vision is to become the leading university table tennis club in Sri Lanka, recognized for excellence in sportsmanship, player development, and community engagement.</p>
+                    <p>We aim to:</p>
+                    <ul>
+                        <li>Promote table tennis as a sport for all students</li>
+                        <li>Develop competitive players who can represent NSBM at national and international levels</li>
+                        <li>Create a welcoming community that fosters friendship and personal growth</li>
+                        <li>Organize tournaments and events that bring the table tennis community together</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="section cta-section">
+        <div class="container">
+            <h2>Ready to Join?</h2>
+            <p>Become a part of our growing table tennis community</p>
+            <a href="#contact" class="cta-button large">Join Now</a>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>NSBM Green University, Mahenwaththa, Pitipana, Homagama</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ttclub@nsbm.lk</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+94 11 544 5000</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Training Sessions: Mon, Wed, Fri 4 PM - 7 PM</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Type your message here"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 NSBM Table Tennis Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
