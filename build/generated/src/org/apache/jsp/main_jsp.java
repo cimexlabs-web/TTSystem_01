@@ -3,6 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.sql.*;
+import util.DBconnection;
 
 public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -44,6 +46,8 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -56,7 +60,7 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <nav class=\"navbar\">\n");
       out.write("        <div class=\"nav-container\">\n");
       out.write("            <div class=\"logo-container\">\n");
-      out.write("                <img class=\"logo\" src=\"images/logo.jpg\" alt=\"NSBM Table Tennis Club logo\">\n");
+      out.write("                <img class=\"logo\" src=\"Images/logo.jpg\" alt=\"NSBM Table Tennis Club logo\">\n");
       out.write("                <div class=\"brand\">NSBM TABLE TENNIS CLUB</div>\n");
       out.write("            </div>\n");
       out.write("            \n");
@@ -81,7 +85,7 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <a href=\"form.html\" class=\"cta-button large\">Join Now</a>\n");
       out.write("        </div>\n");
       out.write("        <div class=\"hero-image\">\n");
-      out.write("            <img src=\"images/cover.jpg\" alt=\"Table tennis players\">\n");
+      out.write("            <img src=\"Images/cover.jpg\" alt=\"Table tennis players\">\n");
       out.write("        </div>\n");
       out.write("    </section>\n");
       out.write("\n");
@@ -97,19 +101,19 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\n");
       out.write("                <div class=\"about-images\">\n");
       out.write("                <div class=\"about-image\">\n");
-      out.write("                    <img src=\"images/about1.jpg\" alt=\"Table tennis match at NSBM\">\n");
+      out.write("                    <img src=\"Images/about1.jpg\" alt=\"Table tennis match at NSBM\">\n");
       out.write("                </div>\n");
       out.write("                <div class=\"about-image\">\n");
-      out.write("                    <img src=\"images/about2.jpg\" alt=\"Table tennis match at NSBM\">\n");
+      out.write("                    <img src=\"Images/about2.jpg\" alt=\"Table tennis match at NSBM\">\n");
       out.write("                </div>\n");
       out.write("                    \n");
       out.write("                    </div>\n");
       out.write("                <div class=\"about-images\">\n");
       out.write("                <div class=\"about-image\">\n");
-      out.write("                    <img src=\"images/about3.jpg\" alt=\"Table tennis match at NSBM\">\n");
+      out.write("                    <img src=\"Images/about3.jpg\" alt=\"Table tennis match at NSBM\">\n");
       out.write("                </div>\n");
       out.write("                <div class=\"about-image\">\n");
-      out.write("                    <img src=\"images/about4.jpg\" alt=\"Table tennis match at NSBM\">\n");
+      out.write("                    <img src=\"Images/about4.jpg\" alt=\"Table tennis match at NSBM\">\n");
       out.write("                </div>\n");
       out.write("                    \n");
       out.write("                    </div>\n");
@@ -130,7 +134,7 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    \n");
       out.write("                </div>\n");
       out.write("                <div class=\"vision-image\">\n");
-      out.write("                    <img src=\"images/vision.jpg\">\n");
+      out.write("                    <img src=\"Images/vision.jpg\">\n");
       out.write("                </div>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
@@ -151,7 +155,7 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </button>\n");
       out.write("                <div class=\"accordion-content\">\n");
       out.write("                    <div class=\"achievement-details\">\n");
-      out.write("                        <img src=\"images/ac2024.jpg\" alt=\"2024 achivment\">\n");
+      out.write("                        <img src=\"Images/ac2024.jpg\" alt=\"2024 achivment\">\n");
       out.write("                        <div class=\"achievement-text\">\n");
       out.write("                            <h3> NSBM SPORTS FIESTA 2024</h3>\n");
       out.write("                            \n");
@@ -174,7 +178,7 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </button>\n");
       out.write("                <div class=\"accordion-content\">\n");
       out.write("                    <div class=\"achievement-details\">\n");
-      out.write("                        <img src=\"images/ac2023p1.jpg\" alt=\"2023 achivment\">\n");
+      out.write("                        <img src=\"Images/ac2023p1.jpg\" alt=\"2023 achivment\">\n");
       out.write("                        <div class=\"achievement-text\">\n");
       out.write("                            <h3>  USPORTS 2023</h3>\n");
       out.write("                            <ul>\n");
@@ -206,7 +210,7 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"messages-container\">\n");
       out.write("            <div class=\"message-card\">\n");
       out.write("                <div class=\"message-photo\">\n");
-      out.write("                    <img src=\"images/president.jpg\" alt=\"Club President\">\n");
+      out.write("                    <img src=\"Images/president.jpg\" alt=\"Club President\">\n");
       out.write("                    <div class=\"message-info\">\n");
       out.write("                        <div class=\"message-role\">President</div>\n");
       out.write("                        <h3 class=\"message-name\">Miss. Hirushi Rathnayaka</h3>\n");

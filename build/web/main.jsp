@@ -19,7 +19,7 @@
         <nav class="navbar">
         <div class="nav-container">
             <div class="logo-container">
-                <img class="logo" src="images/logo.jpg" alt="NSBM Table Tennis Club logo">
+                <img class="logo" src="Images/logo.jpg" alt="NSBM Table Tennis Club logo">
                 <div class="brand">NSBM TABLE TENNIS CLUB</div>
             </div>
             
@@ -44,7 +44,7 @@
             <a href="form.html" class="cta-button large">Join Now</a>
         </div>
         <div class="hero-image">
-            <img src="images/cover.jpg" alt="Table tennis players">
+            <img src="Images/cover.jpg" alt="Table tennis players">
         </div>
     </section>
 
@@ -60,19 +60,19 @@
                 </div>
                 <div class="about-images">
                 <div class="about-image">
-                    <img src="images/about1.jpg" alt="Table tennis match at NSBM">
+                    <img src="Images/about1.jpg" alt="Table tennis match at NSBM">
                 </div>
                 <div class="about-image">
-                    <img src="images/about2.jpg" alt="Table tennis match at NSBM">
+                    <img src="Images/about2.jpg" alt="Table tennis match at NSBM">
                 </div>
                     
                     </div>
                 <div class="about-images">
                 <div class="about-image">
-                    <img src="images/about3.jpg" alt="Table tennis match at NSBM">
+                    <img src="Images/about3.jpg" alt="Table tennis match at NSBM">
                 </div>
                 <div class="about-image">
-                    <img src="images/about4.jpg" alt="Table tennis match at NSBM">
+                    <img src="Images/about4.jpg" alt="Table tennis match at NSBM">
                 </div>
                     
                     </div>
@@ -93,7 +93,7 @@
                     
                 </div>
                 <div class="vision-image">
-                    <img src="images/vision.jpg">
+                    <img src="Images/vision.jpg">
                 </div>
             </div>
         </div>
@@ -114,7 +114,7 @@
                 </button>
                 <div class="accordion-content">
                     <div class="achievement-details">
-                        <img src="images/ac2024.jpg" alt="2024 achivment">
+                        <img src="Images/ac2024.jpg" alt="2024 achivment">
                         <div class="achievement-text">
                             <h3> NSBM SPORTS FIESTA 2024</h3>
                             
@@ -137,7 +137,7 @@
                 </button>
                 <div class="accordion-content">
                     <div class="achievement-details">
-                        <img src="images/ac2023p1.jpg" alt="2023 achivment">
+                        <img src="Images/ac2023p1.jpg" alt="2023 achivment">
                         <div class="achievement-text">
                             <h3>  USPORTS 2023</h3>
                             <ul>
@@ -169,7 +169,7 @@
         <div class="messages-container">
             <div class="message-card">
                 <div class="message-photo">
-                    <img src="images/president.jpg" alt="Club President">
+                    <img src="Images/president.jpg" alt="Club President">
                     <div class="message-info">
                         <div class="message-role">President</div>
                         <h3 class="message-name">Miss. Hirushi Rathnayaka</h3>
