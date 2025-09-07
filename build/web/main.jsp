@@ -1,14 +1,22 @@
+<%-- 
+    Document   : main
+    Created on : Sep 7, 2025, 6:17:40 PM
+    Author     : Akila Perera
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="util.DBconnection" %>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSBM Table Tennis Club</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="mainCss.css">
-</head>
-<body>
-    <nav class="navbar">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>NSBM TABLE TENNIS CLUB</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="mainCss.css">
+    </head>
+    <body>
+        <nav class="navbar">
         <div class="nav-container">
             <div class="logo-container">
                 <img class="logo" src="images/logo.jpg" alt="NSBM Table Tennis Club logo">
@@ -265,5 +273,5 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
+    </body>
 </html>

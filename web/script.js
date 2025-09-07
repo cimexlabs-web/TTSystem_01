@@ -70,3 +70,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// Simple form validation
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('loginError');
+            
+            // Simple validation
+            if (username.trim() === '' || password.trim() === '') {
+                errorDiv.textContent = 'Please fill in all fields';
+                errorDiv.style.display = 'block';
+                return;
+            }
+            
+            // If validation passes, submit the form
+            this.submit();
+        });

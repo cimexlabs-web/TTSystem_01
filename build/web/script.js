@@ -1,4 +1,4 @@
-// script.js - JavaScript for NSBM Table Tennis Club
+
 
 // Mobile menu toggle functionality
 const menuToggle = document.getElementById('menuToggle');
@@ -51,11 +51,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Form submission handling
-const contactForm = document.querySelector('.contact-form form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your message! We will get back to you soon.');
-        this.reset();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.classList.remove('show');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.classList.add('show');
+            }
+        });
     });
-}
+});
+// Simple form validation
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('loginError');
+            
+            // Simple validation
+            if (username.trim() === '' || password.trim() === '') {
+                errorDiv.textContent = 'Please fill in all fields';
+                errorDiv.style.display = 'block';
+                return;
+            }
+            
+            // If validation passes, submit the form
+            this.submit();
+        });
