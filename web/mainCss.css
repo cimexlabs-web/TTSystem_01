@@ -600,3 +600,171 @@ footer {
         font-size: 1rem;
     }
 }
+/* Leadership Messages Section - Full Photo Version */
+#messages {
+    background: linear-gradient(to bottom, #ffffff, #f0f7ff);
+}
+
+.messages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.message-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.message-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.message-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    flex-wrap: wrap;
+    min-width: 100px;
+    transition: transform 0.5s ease;
+}
+
+.message-card:hover .message-photo img {
+    transform: scale(1.03);
+}
+
+.message-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 77, 38, 0.9), transparent);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    text-align: center;
+}
+
+.message-role {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFC107;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.message-name {
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.message-content {
+    padding: 2.5rem 2rem;
+    position: relative;
+}
+
+.message-icon {
+    position: absolute;
+    top: -25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #004D26;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.message-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: #444;
+    font-size: 1.05rem;
+}
+
+.message-content p:first-of-type {
+    margin-top: 0.5rem;
+}
+
+.message-signature {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.message-signature img {
+    height: 40px;
+    margin-right: 15px;
+    opacity: 0.8;
+}
+
+.message-signature span {
+    font-weight: 600;
+    color: #004D26;
+    font-style: italic;
+}
+
+/* Responsive adjustments for messages */
+@media screen and (min-width: 992px) {
+    .message-card {
+        flex-direction: row;
+        max-width: 100%;
+    }
+    
+    .message-photo {
+        width: 40%;
+        flex-shrink: 0;
+    }
+    
+    .message-photo img {
+        height: 100%;
+    }
+    
+    .message-content {
+        width: 60%;
+        padding: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .message-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .message-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        top: -20px;
+        right: 20px;
+    }
+    
+    .message-info {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .message-name {
+        font-size: 1.3rem;
+    }
+}
