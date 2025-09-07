@@ -1,0 +1,24 @@
+.navbar{
+    background-color: #004D26;
+    height: 56px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 12px;
+    color: white;
+}
+.logo{
+    width: 2.15cm;
+    height: 1.9cm;
+    border-radius: 8px;
+    
+}
+.navlist{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+.brand{
+    padding-right: 800px;
+}
+
