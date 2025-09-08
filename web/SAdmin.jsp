@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="stylesheet" href="mainCss.css">
+        <link rel="stylesheet" href="css/SAdmin.css">
         <title>Admin Panel</title>
     </head>
     <body class="admin-body">

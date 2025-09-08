@@ -87,6 +87,7 @@ public class LoginServlet extends HttpServlet {
             HttpSession session= request.getSession();
             session.setAttribute("username", user);
             session.setAttribute("role", "NAdmin");
+            session.setMaxInactiveInterval(2400);
             response.sendRedirect("NAdmin.jsp");
         }
         else if("SAdmin".equals(u.validateuser(user,pws)))
@@ -94,6 +95,7 @@ public class LoginServlet extends HttpServlet {
             HttpSession session= request.getSession();
             session.setAttribute("username", user);
             session.setAttribute("role", "SAdmin");
+            session.setMaxInactiveInterval(2400);
             response.sendRedirect("SAdmin.jsp");
         }
         else

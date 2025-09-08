@@ -14,6 +14,11 @@
             response.sendRedirect("login.html");
             return;
         }
+        
+        String dashboardPage = "NAdmin.jsp"; 
+        if ("SAdmin".equals(session.getAttribute("role"))) {
+            dashboardPage = "SAdmin.jsp";
+        }
     %>
     
     <div class="admin-page-container">
@@ -31,14 +36,11 @@
                 <i class="fas fa-reply"></i>
                 <span>Reply to Messages</span>
             </a>
-            <a href="message_settings.jsp" class="admin-page-btn">
-                <i class="fas fa-cog"></i>
-                <span>Message Settings</span>
-            </a>
+            
         </div>
         
         <div style="text-align: center; margin-top: 30px;">
-            <a href="NAdmin.jsp" class="admin-back-btn">
+            <a href="<%=dashboardPage%>" class="admin-back-btn">
                 <i class="fas fa-arrow-left"></i> Back to Dashboard
             </a>
         </div>
