@@ -70,11 +70,11 @@ public final class NAdmin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("            \n");
       out.write("            <div class=\"panel-button\">\n");
-      out.write("                <a href=\"edit.html\" class=\"a-btn\">\n");
+      out.write("                <a href=\"edit.jsp\" class=\"a-btn\">\n");
       out.write("                    <i class=\"fas fa-edit\"></i>\n");
       out.write("                    <span>Edit Web page</span>\n");
       out.write("                </a>\n");
-      out.write("                <a href=\"player.html\" class=\"a-btn\">\n");
+      out.write("                <a href=\"players_info.jsp\" class=\"a-btn\">\n");
       out.write("                    <i class=\"fas fa-users\"></i>\n");
       out.write("                    <span>Players</span>\n");
       out.write("                </a>\n");
