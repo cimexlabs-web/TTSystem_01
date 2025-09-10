@@ -69,7 +69,7 @@
     
         <div class="edit-about">
             <div class="edit-header">
-                <h1>Edit About Us Section</h1>
+                <h1>Change LOGO</h1>
             </div>
             
             <div class="edit-about-containt">
@@ -95,7 +95,7 @@
         
                 <div class="edit-about">
             <div class="edit-header">
-                <h1>Edit About Us Section</h1>
+                <h1>Change cover photo</h1>
             </div>
             
             <div class="edit-about-containt">
