@@ -5,6 +5,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import java.sql.*;
 import util.DBconnection;
+import dao.mainDAO;
 
 public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -48,6 +49,7 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -57,10 +59,11 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"mainCss.css\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
+      out.write("        \n");
       out.write("        <nav class=\"navbar\">\n");
       out.write("        <div class=\"nav-container\">\n");
       out.write("            <div class=\"logo-container\">\n");
-      out.write("                <img class=\"logo\" src=\"Images/logo.jpg\" alt=\"NSBM Table Tennis Club logo\">\n");
+      out.write("                <img class=\"logo\" src=\"mainImage?id=1\" alt=\"Logo\">\n");
       out.write("                <div class=\"brand\">NSBM TABLE TENNIS CLUB</div>\n");
       out.write("            </div>\n");
       out.write("            \n");
@@ -85,7 +88,7 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <a href=\"form.html\" class=\"cta-button large\">Join Now</a>\n");
       out.write("        </div>\n");
       out.write("        <div class=\"hero-image\">\n");
-      out.write("            <img src=\"Images/cover.jpg\" alt=\"Table tennis players\">\n");
+      out.write("            <img  src=\"mainImage?id=2\" alt=\"Cover\">\n");
       out.write("        </div>\n");
       out.write("    </section>\n");
       out.write("\n");
@@ -94,26 +97,33 @@ public final class main_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <h2 class=\"section-title\">About Us</h2>\n");
       out.write("            <div class=\"about-content\">\n");
       out.write("                <div class=\"about-text\">\n");
-      out.write("                    <p>We are the NSBM Table Tennis Club – a community of passionate players who\n");
-      out.write("      strive to improve skills, promote sportsmanship, and represent NSBM in\n");
-      out.write("      tournaments with pride. Whether you're a beginner or an advanced player,\n");
-      out.write("      our club welcomes you.</p>\n");
+      out.write("                    <p>\n");
+      out.write("                        ");
+
+                            mainDAO about= new mainDAO();
+                            String ab= about.about(3);
+                            
+      out.write("\n");
+      out.write("                            ");
+      out.print(ab);
+      out.write("\n");
+      out.write("                    </p>\n");
       out.write("                </div>\n");
       out.write("                <div class=\"about-images\">\n");
       out.write("                <div class=\"about-image\">\n");
-      out.write("                    <img src=\"Images/about1.jpg\" alt=\"Table tennis match at NSBM\">\n");
+      out.write("                    <img src=\"mainImage?id=3\" alt=\"Table tennis match at NSBM\">\n");
       out.write("                </div>\n");
       out.write("                <div class=\"about-image\">\n");
-      out.write("                    <img src=\"Images/about2.jpg\" alt=\"Table tennis match at NSBM\">\n");
+      out.write("                    <img src=\"mainImage?id=4\" alt=\"Table tennis match at NSBM\">\n");
       out.write("                </div>\n");
       out.write("                    \n");
       out.write("                    </div>\n");
       out.write("                <div class=\"about-images\">\n");
       out.write("                <div class=\"about-image\">\n");
-      out.write("                    <img src=\"Images/about3.jpg\" alt=\"Table tennis match at NSBM\">\n");
+      out.write("                    <img src=\"mainImage?id=5\" alt=\"Table tennis match at NSBM\">\n");
       out.write("                </div>\n");
       out.write("                <div class=\"about-image\">\n");
-      out.write("                    <img src=\"Images/about4.jpg\" alt=\"Table tennis match at NSBM\">\n");
+      out.write("                    <img src=\"mainImage?id=6\" alt=\"Table tennis match at NSBM\">\n");
       out.write("                </div>\n");
       out.write("                    \n");
       out.write("                    </div>\n");

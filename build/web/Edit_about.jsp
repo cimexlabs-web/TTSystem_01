@@ -3,6 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/edit_form_css.css">
     <title>Edit About</title>
     <style>
         body {
@@ -66,6 +67,8 @@
             border: 1px solid #ccc;
             margin-bottom: 15px;
         }
+
+
     </style>
 </head>
 <body>
@@ -79,12 +82,12 @@
 <!-- Logo -->
 <div class="edit-about">
     <div class="edit-header"><h1>Change LOGO</h1></div>
-    <form action="uploadServlet" method="post" enctype="multipart/form-data">
+    <form action="uploadEdit" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="1">
         <label for="imageUpload0">
             <div class="image-placeholder" id="placeholder0">Click or Drag & Drop Image Here</div>
         </label>
-        <input type="file" name="image" id="imageUpload0" accept="image/*" onchange="previewImage(event, 0)">
+        <input type="file" name="image1" id="imageUpload0" accept="image/*" onchange="previewImage(event, 0)">
         <div style="text-align:center;"><button type="submit" class="submit-btn">Submit</button></div>
     </form>
 </div>
@@ -92,12 +95,12 @@
 <!-- Cover Photo -->
 <div class="edit-about">
     <div class="edit-header"><h1>Change Cover Photo</h1></div>
-    <form action="uploadServlet" method="post" enctype="multipart/form-data">
+    <form action="uploadEdit" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="2">
         <label for="imageUpload1">
             <div class="image-placeholder" id="placeholder1">Click or Drag & Drop Image Here</div>
         </label>
-        <input type="file" name="image" id="imageUpload1" accept="image/*" onchange="previewImage(event, 1)">
+        <input type="file" name="image2" id="imageUpload1" accept="image/*" onchange="previewImage(event, 1)">
         <div style="text-align:center;"><button type="submit" class="submit-btn">Submit</button></div>
     </form>
 </div>
@@ -105,7 +108,7 @@
 <!-- About Us Text -->
 <div class="edit-about">
     <div class="edit-header"><h1>Edit About Us Text</h1></div>
-    <form action="updateAboutServlet" method="post">
+    <form action="uploadEdit" method="post" enctype="multipart/form-data">
         <textarea name="aboutUs" placeholder="Write About Us here..."><%= request.getAttribute("aboutText") != null ? request.getAttribute("aboutText") : "" %></textarea>
         <div style="text-align:center;"><button type="submit" class="submit-btn">Update Text</button></div>
     </form>
@@ -118,12 +121,12 @@
 %>
 <div class="edit-about">
     <div class="edit-header"><h1>Change About Us <%= photoNames[i] %></h1></div>
-    <form action="uploadServlet" method="post" enctype="multipart/form-data">
+    <form action="uploadEdit" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<%= i+3 %>"> <!-- IDs 3-6 -->
         <label for="imageUpload<%=i+2%>">
             <div class="image-placeholder" id="placeholder<%=i+2%>">Click or Drag & Drop Image Here</div>
         </label>
-        <input type="file" name="image" id="imageUpload<%=i+2%>" accept="image/*" onchange="previewImage(event, <%=i+2%>)">
+        <input type="file" name="image<%= i+3 %>" id="imageUpload<%=i+2%>" accept="image/*" onchange="previewImage(event, <%=i+2%>)">
         <div style="text-align:center;"><button type="submit" class="submit-btn">Submit</button></div>
     </form>
 </div>
