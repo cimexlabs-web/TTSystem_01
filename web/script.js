@@ -88,3 +88,83 @@ document.addEventListener('DOMContentLoaded', function() {
             // If validation passes, submit the form
             this.submit();
         });
+        
+        
+      
+        function previewVisionImage(event){
+            const placeholder = document.getElementById("visionPlaceholder");
+            const fileInput = document.getElementById("visionPhotoUpload");
+            const file = event.target.files[0];
+            if(file){
+                const reader = new FileReader();
+                reader.onload = function(e){
+                    placeholder.style.backgroundImage = "url('" + e.target.result + "')";
+                    placeholder.innerHTML = "";
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Drag & Drop for Vision photo
+        const visionPlaceholder = document.getElementById("visionPlaceholder");
+        const visionFileInput = document.getElementById("visionPhotoUpload");
+
+        visionPlaceholder.addEventListener("dragover", function(e){
+            e.preventDefault();
+            visionPlaceholder.classList.add("dragover");
+        });
+
+        visionPlaceholder.addEventListener("dragleave", function(e){
+            e.preventDefault();
+            visionPlaceholder.classList.remove("dragover");
+        });
+
+        visionPlaceholder.addEventListener("drop", function(e){
+            e.preventDefault();
+            visionPlaceholder.classList.remove("dragover");
+            const file = e.dataTransfer.files[0];
+            if(file){
+                visionFileInput.files = e.dataTransfer.files;
+                previewVisionImage({target:{files:[file]}});
+            }
+        });
+        
+        
+        
+        function previewImage(event, index){
+    const placeholder = document.getElementById("placeholder"+index);
+    const fileInput = document.getElementById("imageUpload"+index);
+    const file = event.target.files[0];
+    if(file){
+        const reader = new FileReader();
+        reader.onload = function(e){
+            placeholder.style.backgroundImage = "url('" + e.target.result + "')";
+            placeholder.innerHTML = "";
+        }
+        reader.readAsDataURL(file);
+    }
+}
+
+// Drag & Drop for all placeholders
+const totalPlaceholders = 6; // 0=logo,1=cover,2-5=about photos
+for(let i=0;i<totalPlaceholders;i++){
+    const placeholder = document.getElementById("placeholder"+i);
+    const fileInput = document.getElementById("imageUpload"+i);
+    placeholder.addEventListener("dragover", function(e){
+        e.preventDefault();
+        placeholder.classList.add("dragover");
+    });
+    placeholder.addEventListener("dragleave", function(e){
+        e.preventDefault();
+        placeholder.classList.remove("dragover");
+    });
+    placeholder.addEventListener("drop", function(e){
+        e.preventDefault();
+        placeholder.classList.remove("dragover");
+        const file = e.dataTransfer.files[0];
+        if(file){
+            fileInput.files = e.dataTransfer.files;
+            previewImage({target:{files:[file]}}, i);
+        }
+    });
+}
