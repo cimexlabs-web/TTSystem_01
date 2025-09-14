@@ -12,7 +12,7 @@
             padding: 0;
         }
         .edit-section {
-            max-width: 700px;
+            max-width: 900px;
             margin: 50px auto;
             background: #fff;
             padding: 20px;
@@ -23,12 +23,26 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        .image-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .db-image {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+        }
         .image-placeholder {
             width: 200px;
             height: 200px;
             border: 2px dashed #aaa;
             border-radius: 10px;
-            margin: 0 auto 15px auto;
             background-size: cover;
             background-position: center;
             display: flex;
@@ -66,6 +80,18 @@
             border: 1px solid #ccc;
             margin-bottom: 15px;
         }
+        .back-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .back-btn:hover {
+            background: #333;
+        }
     </style>
 </head>
 <body>
@@ -74,7 +100,14 @@
         response.sendRedirect("login.html");
         return;
     }
+
+    // ==== Placeholder for DB/Servlet image fetch ====
+    // Example: store the vision photo URL from DB
+    String visionImage = "fetchVisionImageServlet?id=1"; 
 %>
+
+<!-- Back Button -->
+<a href="javascript:history.back()" class="back-btn">← Back</a>
 
 <!-- Vision Text -->
 <div class="edit-section">
@@ -90,16 +123,22 @@
 <!-- Vision Photo -->
 <div class="edit-section">
     <div class="edit-header"><h1>Change Vision Photo</h1></div>
-    <form action="uploadVisionServlet" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="1"> <!-- ID for Vision photo -->
-        <label for="visionPhotoUpload">
-            <div class="image-placeholder" id="visionPlaceholder">Click or Drag & Drop Image Here</div>
-        </label>
-        <input type="file" name="image" id="visionPhotoUpload" accept="image/*" onchange="previewVisionImage(event)">
-        <div style="text-align:center;">
-            <button type="submit" class="submit-btn">Submit</button>
-        </div>
-    </form>
+    <div class="image-wrapper">
+        <!-- Existing DB Image -->
+        <div class="db-image" style="background-image:url('<%= visionImage %>');"></div>
+
+        <!-- Upload New Image -->
+        <form action="uploadVisionServlet" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="1"> <!-- ID for Vision photo -->
+            <label for="visionPhotoUpload">
+                <div class="image-placeholder" id="visionPlaceholder">Click or Drag & Drop Image Here</div>
+            </label>
+            <input type="file" name="image" id="visionPhotoUpload" accept="image/*" onchange="previewVisionImage(event)">
+            <div style="text-align:center;">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <script>
