@@ -7,6 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 <%@ page import="util.DBconnection" %>
+<%@ page import="dao.mainDAO" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,10 +17,11 @@
         <link rel="stylesheet" href="mainCss.css">
     </head>
     <body>
+        
         <nav class="navbar">
         <div class="nav-container">
             <div class="logo-container">
-                <img class="logo" src="Images/logo.jpg" alt="NSBM Table Tennis Club logo">
+                <img class="logo" src="mainImage?id=1" alt="Logo">
                 <div class="brand">NSBM TABLE TENNIS CLUB</div>
             </div>
             
@@ -44,7 +46,7 @@
             <a href="form.html" class="cta-button large">Join Now</a>
         </div>
         <div class="hero-image">
-            <img src="Images/cover.jpg" alt="Table tennis players">
+            <img  src="mainImage?id=2" alt="Cover">
         </div>
     </section>
 
@@ -53,26 +55,29 @@
             <h2 class="section-title">About Us</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>We are the NSBM Table Tennis Club – a community of passionate players who
-      strive to improve skills, promote sportsmanship, and represent NSBM in
-      tournaments with pride. Whether you're a beginner or an advanced player,
-      our club welcomes you.</p>
+                    <p>
+                        <%
+                            mainDAO about= new mainDAO();
+                            String ab= about.about(3);
+                            %>
+                            <%=ab%>
+                    </p>
                 </div>
                 <div class="about-images">
                 <div class="about-image">
-                    <img src="Images/about1.jpg" alt="Table tennis match at NSBM">
+                    <img src="mainImage?id=3" alt="Table tennis match at NSBM">
                 </div>
                 <div class="about-image">
-                    <img src="Images/about2.jpg" alt="Table tennis match at NSBM">
+                    <img src="mainImage?id=4" alt="Table tennis match at NSBM">
                 </div>
                     
                     </div>
                 <div class="about-images">
                 <div class="about-image">
-                    <img src="Images/about3.jpg" alt="Table tennis match at NSBM">
+                    <img src="mainImage?id=5" alt="Table tennis match at NSBM">
                 </div>
                 <div class="about-image">
-                    <img src="Images/about4.jpg" alt="Table tennis match at NSBM">
+                    <img src="mainImage?id=6" alt="Table tennis match at NSBM">
                 </div>
                     
                     </div>
@@ -272,6 +277,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="Script/script.js"></script>
     </body>
 </html>
